@@ -5,6 +5,8 @@ import healthData from '../../public/data/health.json';
 import politicsData from '../../public/data/politics.json';
 import worldData from '../../public/data/world.json';
 import financeData from '../../public/data/finance.json';
+import CategoryFeatured from '@/components/CategoryFeatured';
+import ArticleGrid from '@/components/ArticleGrid';
 
 interface Sub {
   title: string;
@@ -20,6 +22,10 @@ interface NewsItem {
   date: string;
   topic: string;
   sub: Sub[];
+  author?: {
+    name: string;
+    role?: string;
+  };
 }
 
 
@@ -48,7 +54,7 @@ export default async function CategoryPage({
   const { category } = await params;
 
   const data = allData[category];
-const filteredData = category === "finance" ? data.slice(3) : data;
+const filteredData = data
   if (!data) {
     return (
       <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
@@ -62,9 +68,29 @@ const filteredData = category === "finance" ? data.slice(3) : data;
     );
   }
 
+  const gridArticles = filteredData.slice(4).map((item, index) => ({
+    id: item.slug || index.toString(),
+    category: item.category,
+    headline: item.title,
+    credit: "The Texas Tribune",
+    byline: item.author?.name ? `BY *${item.author.name.toUpperCase()}*` : "TEXAS TRIBUNE STAFF",
+    date: (item.date || "").toUpperCase(),
+    image: item.image
+  }));
+
   return (
     <>
-     
+      <CategoryFeatured articles={filteredData} />
+      {gridArticles.length > 0 && (
+        <ArticleGrid 
+          articles={gridArticles} 
+          columns={4} 
+          initialCount={12}
+          title="RECENT NEWS" 
+          showCategory={false}
+          buttonText="LOAD MORE"
+        />
+      )}
     </>
   );
 }

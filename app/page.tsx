@@ -21,11 +21,10 @@ const mapDataToArticle = (data: any, index: number) => ({
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <TopHeader />
-      <MainHeader />
+
       <TopStories articles={businessData.slice(0, 3).map(mapDataToArticle)} />
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-<ListGrid articles={businessData.slice(3, 6).map(mapDataToArticle)} />
+      <ListGrid articles={businessData.slice(3, 6).map(mapDataToArticle)} />
       <NewsletterBox />
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
 
@@ -33,9 +32,9 @@ export default function Home() {
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
 
       <BriefNewsletterBox />
-      
+
       {/* Pass data to the reusable grid, initializing at 6 entries visible */}
-      <ArticleGrid articles={[businessData[4], businessData[5], businessData[6], businessData[7], businessData[8], businessData[9],businessData[10],businessData[11]].map(mapDataToArticle)} />
+      <ArticleGrid articles={[businessData[4], businessData[5], businessData[6], businessData[7], businessData[8], businessData[9], businessData[10], businessData[11]].map(mapDataToArticle)} />
 
     </div>
   );

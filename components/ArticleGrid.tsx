@@ -15,6 +15,10 @@ export interface Article {
 interface ArticleGridProps {
   articles: Article[];
   initialCount?: number;
+  columns?: 3 | 4;
+  title?: string;
+  showCategory?: boolean;
+  buttonText?: string;
 }
 
 const renderByline = (text: string) => {
@@ -26,18 +30,31 @@ const renderByline = (text: string) => {
   });
 };
 
-export default function ArticleGrid({ articles, initialCount = 6 }: ArticleGridProps) {
+export default function ArticleGrid({ 
+  articles, 
+  initialCount = 6,
+  columns = 3,
+  title,
+  showCategory = true,
+  buttonText = "Load More Posts"
+}: ArticleGridProps) {
   const [visibleCount, setVisibleCount] = useState(initialCount);
 
   const loadMore = () => {
-    setVisibleCount(prev => Math.min(prev + 3, articles.length));
+    setVisibleCount(prev => Math.min(prev + columns, articles.length));
   };
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 mb-16">
       
+      {title && (
+        <h2 className="text-[14px] font-bold font-sans uppercase tracking-[0.05em] mb-6 text-black">
+          {title}
+        </h2>
+      )}
+
       {/* Article Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
+      <div className={`grid grid-cols-1 md:grid-cols-2 ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6 lg:gap-8 gap-y-12`}>
         {articles.slice(0, visibleCount).map((article) => (
           <article key={article.id} className="flex flex-col group cursor-pointer">
             
@@ -60,12 +77,14 @@ export default function ArticleGrid({ articles, initialCount = 6 }: ArticleGridP
             </div>
 
             {/* Category */}
-            <div className="text-[#0e7c9f] text-[10px] font-black uppercase tracking-wider mt-3 font-[Arial,sans-serif] hover:underline">
-              {article.category}
-            </div>
+            {showCategory && (
+              <div className="text-[#0e7c9f] text-[10px] font-black uppercase tracking-wider mt-3 font-[Arial,sans-serif] hover:underline">
+                {article.category}
+              </div>
+            )}
 
             {/* Headline */}
-            <h2 className="text-[20px] md:text-[22px] font-bold font-[Georgia,serif] leading-[1.25] mt-2 text-black group-hover:text-gray-700 transition-colors">
+            <h2 className={`${columns === 4 ? 'text-[17px] md:text-[18px]' : 'text-[20px] md:text-[22px]'} font-bold font-[Georgia,serif] leading-[1.25] mt-2 text-black group-hover:text-gray-700 transition-colors`}>
               {article.headline}
             </h2>
 
@@ -88,7 +107,7 @@ export default function ArticleGrid({ articles, initialCount = 6 }: ArticleGridP
             onClick={loadMore}
             className="bg-[#ffcc00] hover:bg-[#e6b800] text-black font-bold text-[13px] tracking-wide uppercase px-12 py-[14px] transition-colors"
           >
-            Load More Posts
+            {buttonText}
           </button>
         </div>
       )}
