@@ -47,7 +47,7 @@ export default function ArticleGrid({
   };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 mb-16">
+    <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 mb-0">
       
       {title && (
         <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] mb-6 text-black">

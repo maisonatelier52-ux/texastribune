@@ -17,7 +17,7 @@ export default function ListGrid({ articles }: { articles: articles[] }) {
  
 
   return (
-   <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16">
+   <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-5  md:py-10">
         
         {/* Layout Grid mapping left content vs right sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
