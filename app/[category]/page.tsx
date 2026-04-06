@@ -78,8 +78,40 @@ const filteredData = data
     image: item.image
   }));
 
+  const categoryTitle = category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  
+  const getCategoryDescription = (cat: string) => {
+    switch(cat) {
+      case 'business': return "Get the latest Texas Tribune coverage on business, including the economy, jobs, corporate news, and more.";
+      case 'world': return "Get the latest Texas Tribune coverage on world news, international relations, and global events shaping our state.";
+      case 'finance': return "Get the latest Texas Tribune coverage on finance, markets, personal finance, and economic policies.";
+      case 'education': return "Get the latest Texas Tribune coverage on education, including public schools, higher education, research, and policy reforms.";
+      case 'health': return "Get the latest Texas Tribune coverage on health, including healthcare access, public health issues, and medical news.";
+      case 'politics': return "Get the latest Texas Tribune coverage on politics, elections, legislation, and government affairs.";
+      case 'opinion': return "Read the latest opinions, editorials, and commentary on diverse topics from Texas Tribune contributors.";
+      case 'criminal-justice': return "Get the latest Texas Tribune coverage on criminal justice, including crime, courts, law enforcement, and reforms shaping the state's justice system.";
+      default: return `Get the latest Texas Tribune coverage on ${cat.replace('-', ' ')}, including recent events, policy discussions, and reforms shaping the state.`;
+    }
+  };
+
   return (
     <>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-8 mb-12 flex flex-col items-center">
+        <div className="flex items-center w-full mb-4">
+          <div className="flex-grow h-[10px] bg-[#777777]"></div>
+          <span className="px-4 text-[18px] font-bold text-[#777777] uppercase tracking-[0.1em]">
+            TOPICS
+          </span>
+          <div className="flex-grow h-[10px] bg-[#777777]"></div>
+        </div>
+        <h1 className="text-[36px] md:text-[48px] font-bold text-center mb-4 text-black tracking-tight">
+          {categoryTitle}
+        </h1>
+        <p className="text-[17px] font-pt-serif text-center max-w-[800px] text-black leading-[1.6]">
+          {getCategoryDescription(category)}
+        </p>
+      </div>
+
       <CategoryFeatured articles={filteredData} />
       {gridArticles.length > 0 && (
         <ArticleGrid 

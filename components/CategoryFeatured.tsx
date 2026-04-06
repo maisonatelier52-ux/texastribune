@@ -45,17 +45,17 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
   const trendingArticles = articles.slice(1, 4);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-12 bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 xl:gap-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
         {/* Left Column: Featured Stories */}
         <div>
-          <h2 className="text-[13px] font-bold font-sans uppercase tracking-[0.05em] border-b-[2px] border-black pb-[6px] mb-6">
+          <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] pb-[6px] mb-4 text-black">
             FEATURED STORIES
           </h2>
           <MainArticle 
             imageUrl={mainArticle.image}
             headline={mainArticle.title}
-            summary={mainArticle.shortdescription}
+            summary=''
             byline={`BY *${mainArticle.author?.name?.toUpperCase() || 'TEXAS TRIBUNE STAFF'}*`}
             date={mainArticle.date.toUpperCase()}
             credit="Texas Tribune"
@@ -63,14 +63,14 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
         </div>
 
         {/* Right Column: Trending Now */}
-        <div className="flex flex-col">
-          <h2 className="text-[13px] font-bold font-sans uppercase tracking-[0.05em] border-b-[2px] border-black pb-[6px] mb-6">
+        <div className="flex flex-col mt-8 lg:mt-[48px]">
+          <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] pb-[6px] mb-4 text-black">
             TRENDING NOW
           </h2>
           <div className="flex flex-col space-y-7">
             {trendingArticles.map((article, i) => (
               <article key={i} className="group cursor-pointer">
-                <h3 className="text-[18px] md:text-[20px] font-bold font-[Georgia,serif] leading-[1.25] text-black group-hover:text-gray-700 transition-colors mb-2.5">
+                <h3 className="text-[18px] md:text-[21px] font-bold font-pt-serif leading-[1.1] text-black group-hover:text-gray-700 transition-colors mb-2.5">
                   <Link href={`/${article.category}/${article.slug}`}>
                     {article.title}
                   </Link>

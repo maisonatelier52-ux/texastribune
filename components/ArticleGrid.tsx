@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export interface Article {
   id: number | string;
@@ -48,7 +49,7 @@ export default function ArticleGrid({
     <section className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 mb-16">
       
       {title && (
-        <h2 className="text-[14px] font-bold font-sans uppercase tracking-[0.05em] mb-6 text-black">
+        <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] mb-6 text-black">
           {title}
         </h2>
       )}
@@ -60,22 +61,15 @@ export default function ArticleGrid({
             
             {/* Image */}
             <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
-              <img 
+              <Image 
                 src={article.image} 
                 alt={article.headline} 
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
               />
             </div>
             
-            {/* Credit */}
-            <div className="flex items-center text-[10px] md:text-[10px] text-gray-500 mt-2 font-sans font-semibold">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="#888" className="mr-[5px] shrink-0">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                <circle cx="12" cy="13" r="4" fill="white"></circle>
-              </svg>
-              {article.credit}
-            </div>
-
+           
             {/* Category */}
             {showCategory && (
               <div className="text-[#0e7c9f] text-[10px] font-black uppercase tracking-wider mt-3 font-[Arial,sans-serif] hover:underline">
@@ -84,7 +78,7 @@ export default function ArticleGrid({
             )}
 
             {/* Headline */}
-            <h2 className={`${columns === 4 ? 'text-[17px] md:text-[18px]' : 'text-[20px] md:text-[22px]'} font-bold font-[Georgia,serif] leading-[1.25] mt-2 text-black group-hover:text-gray-700 transition-colors`}>
+            <h2 className={`${columns === 4 ? 'text-[17px] md:text-[18px]' : 'text-[20px] md:text-[21px]'} font-bold font-pt-serif leading-none mt-2 text-black group-hover:text-gray-700 transition-colors`}>
               {article.headline}
             </h2>
 

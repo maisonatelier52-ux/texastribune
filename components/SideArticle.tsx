@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const renderByline = (text: string) => {
   if (!text) return null;
@@ -11,7 +12,7 @@ const renderByline = (text: string) => {
 };
 
 interface SideArticleProps {
-  imageUrl?: string;
+  imageUrl: string;
   credit?: string;
   headline?: string;
   byline?: string;
@@ -22,25 +23,20 @@ export default function SideArticle({ imageUrl, credit, headline, byline, date }
   return (
     <article className="flex flex-col w-full group cursor-pointer">
       {/* Image */}
-      <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
-        <img 
+      <div className="w-full relative overflow-hidden bg-gray-100">
+        <Image 
           src={imageUrl} 
           alt={headline?.substring(0, 50) || "Side article image"} 
-          className="object-cover w-full h-full"
+          width={600}
+          height={500}
+          className="object-cover w-full aspect-[3/2]"
         />
       </div>
       
-      {/* Credit */}
-      <div className="flex items-center text-[10px] md:text-[11px] text-gray-500 mt-2 font-sans font-semibold">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#888" className="mr-1 shrink-0">
-          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-          <circle cx="12" cy="13" r="4" fill="white"></circle>
-        </svg>
-        {credit}
-      </div>
+    
 
       {/* Headline */}
-      <h2 className="text-[20px] md:text-[22px] font-bold font-[Georgia,serif] leading-[1.2] mt-2 text-black group-hover:text-gray-700 transition-colors">
+      <h2 className="text-[20px] md:text-[21px] font-bold font-pt-serif leading-none mt-2 text-black group-hover:text-gray-700 transition-colors">
         {headline}
       </h2>
 

@@ -1,6 +1,19 @@
 import React from 'react';
+import Link from 'next/link';
 
-export default function ExploreData() {
+interface articles {
+  title: string;
+  shortdescription: string;
+  slug: string;
+  category: string;
+}
+interface ExploreDataProps {
+  articles?: articles[];
+}
+
+export default function ExploreData({ articles }: ExploreDataProps) {
+ 
+
   return (
     <div className="w-full flex flex-col pt-2">
       
@@ -16,32 +29,18 @@ export default function ExploreData() {
       {/* List items */}
       <div className="flex flex-col gap-10 mb-10">
         
-        <div className="group cursor-pointer">
-          <h4 className="text-[19px] md:text-[21px] font-bold font-[Georgia,serif] text-black mb-2 leading-tight group-hover:text-gray-700 transition-colors">
-            Elected Officials Directory
-          </h4>
-          <p className="text-[13px] md:text-[13px] text-gray-800 leading-[1.6] font-[Arial,sans-serif]">
-            To help Texans know more about their representatives, we've gathered the bios, contact information and more for the occupants of the state's highest offices.
-          </p>
-        </div>
-
-        <div className="group cursor-pointer">
-          <h4 className="text-[19px] md:text-[21px] font-bold font-[Georgia,serif] text-black mb-2 leading-tight group-hover:text-gray-700 transition-colors">
-            Government Salaries Explorer
-          </h4>
-          <p className="text-[13px] md:text-[13px] text-gray-800 leading-[1.6] font-[Arial,sans-serif]">
-            Review the compensation of hundreds of thousands of state and municipal employees in Texas.
-          </p>
-        </div>
-
-        <div className="group cursor-pointer">
-           <h4 className="text-[19px] md:text-[21px] font-bold font-[Georgia,serif] text-black mb-2 leading-tight group-hover:text-gray-700 transition-colors">
-            Texas Public Schools Explorer
-          </h4>
-          <p className="text-[13px] md:text-[13px] text-gray-800 leading-[1.6] font-[Arial,sans-serif]">
-            Review enrollment trends, demographics, teacher experience, pay and outcomes for all schools, and more.
-          </p>
-        </div>
+        {articles?.map((item: articles, i: number) => (
+          <div key={i} className="group cursor-pointer">
+            <h4 className="text-[19px] md:text-[21px] font-bold font-pt-serif text-black mb-2 leading-[1.1] group-hover:text-gray-700 transition-colors">
+              <Link href={`/${item.category}/${item.slug}`}>
+                {item.title}
+              </Link>
+            </h4>
+            <p className="text-[13px] md:text-[14px] text-gray-800 leading-[1.3] font-pt-serif">
+              {item.shortdescription}
+            </p>
+          </div>
+        ))}
 
       </div>
 

@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-14 pt-6 border-t border-[#3c3c3c] flex flex-col md:flex-row justify-between items-center text-[12px] text-[#A0A0A0]">
+        <div className="mt-14 pt-6 border-t border-[#3c3c3c] flex flex-col md:flex-row justify-between items-center text-[14px] text-white">
           <div className="flex space-x-4 items-center">
             <span>© 2026 The Texas Tribune</span>
             <span>Powered by Newspack</span>

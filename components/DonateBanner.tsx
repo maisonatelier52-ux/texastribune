@@ -23,7 +23,7 @@ export default function DonateBanner() {
         </div>
 
         {/* Headline */}
-        <h2 className="text-white font-bold font-[Georgia,serif] text-[22px] md:text-[30px] lg:text-[34px] leading-tight mb-4 tracking-wide">
+        <h2 className="text-white font-bold font-pt-serif text-[22px] md:text-[30px] lg:text-[34px] leading-tight mb-4 tracking-wide">
           Protect independent Texas journalism.
         </h2>
 

@@ -1,7 +1,19 @@
 import HorizontalArticle from "@/components/HorizontalArticle";
 import ExploreData from "@/components/ExploreData";
 
-export default function ListGrid({ articles }: { articles: any[] }) {
+interface articles {
+  imageUrl: string;
+  headline: string;
+  summary: string;
+  author: string;
+  date: string;
+  title: string;
+  shortdescription: string;
+  slug: string;
+  category: string;
+}
+
+export default function ListGrid({ articles }: { articles: articles[] }) {
  
 
   return (
@@ -12,11 +24,10 @@ export default function ListGrid({ articles }: { articles: any[] }) {
           
           {/* Main Article List -> Spans 8 Columns */}
           <div className="lg:col-span-8 flex flex-col gap-12 border-b lg:border-b-0 pb-12 lg:pb-0 pr-0 lg:pr-4">
-             {articles.map((article) => (
+             {articles.map((article, index) => (
                 <HorizontalArticle 
-                  key={article.id}
+                  key={article.slug || index}
                   imageUrl={article.imageUrl}
-                  credit={article.credit}
                   headline={article.headline}
                   summary={article.summary}
                   author={article.author}
@@ -27,7 +38,7 @@ export default function ListGrid({ articles }: { articles: any[] }) {
 
           {/* Sidebar / Data Tool -> Spans 4 Columns */}
           <div className="lg:col-span-4">
-             <ExploreData />
+             <ExploreData articles={articles} />
           </div>
 
         </div>

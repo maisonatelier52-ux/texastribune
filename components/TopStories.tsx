@@ -13,11 +13,7 @@ export default function TopStories({ articles }: TopStoriesProps) {
   return (
     <section className="w-full bg-white pt-8 pb-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        
-        {/* CSS Grid for Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
-          
-          {/* Main Article (Spans 2 columns on large screens) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <MainArticle 
               imageUrl={mainArticleData?.image}
