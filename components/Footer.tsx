@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">TOPICS</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["Congress", "Courts", "Criminal Justice", "Demographics", "Economy", "Energy", "Environment", "Health Care", "Higher Education", "Immigration", "Politics", "Public Education", "State Government", "Transportation"].map((topic) => (
+              {["World", "Business", "Technology", "Science", "Health", "Sports", "Entertainment", "Travel", "Fashion", "Food", "Culture", "Lifestyle"].map((topic) => (
                 <li key={topic}><Link href="#" className="text-[#E0E0E0] hover:text-white">{topic}</Link></li>
               ))}
             </ul>
@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">INFO</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["About Us", "Our Staff", "Board of Directors", "Jobs", "Who Funds Us?", "Strategic Plan", "Republishing Guidelines", "Code of Ethics", "Terms of Service", "Privacy Policy", "Corrections", "Newsletters", "Audio", "Video", "RSS Feeds"].map((item) => (
+              {["About Us", "Our Staff", "Board of Directors", "Jobs", "Who Funds Us?"].map((item) => (
                 <li key={item}><Link href="#" className="text-[#E0E0E0] hover:text-white">{item}</Link></li>
               ))}
             </ul>
