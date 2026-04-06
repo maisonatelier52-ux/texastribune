@@ -59,6 +59,7 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
             byline={`BY *${mainArticle.author?.name?.toUpperCase() || 'TEXAS TRIBUNE STAFF'}*`}
             date={mainArticle.date.toUpperCase()}
             credit="Texas Tribune"
+            href={`/${mainArticle.category}/${mainArticle.slug}`}
           />
         </div>
 
@@ -69,17 +70,17 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
           </h2>
           <div className="flex flex-col space-y-7">
             {trendingArticles.map((article, i) => (
-              <article key={i} className="group cursor-pointer">
+              <Link href={`/${article.category}/${article.slug}`} key={i} className="block">
+              <article className="group cursor-pointer">
                 <h3 className="text-[18px] md:text-[21px] font-bold font-pt-serif leading-[1.1] text-black group-hover:text-gray-700 transition-colors mb-2.5">
-                  <Link href={`/${article.category}/${article.slug}`}>
-                    {article.title}
-                  </Link>
+                  {article.title}
                 </h3>
                 <div className="text-[10px] font-bold font-[Arial,sans-serif] uppercase tracking-wide flex items-center flex-wrap gap-[6px] leading-tight">
                   <span className="text-gray-500">{renderByline(`BY *${article.author?.name?.toUpperCase() || 'TEXAS TRIBUNE STAFF'}*`)}</span>
                   <span className="text-gray-500 font-normal">{article.date.toUpperCase()}</span>
                 </div>
               </article>
+              </Link>
             ))}
           </div>
         </div>

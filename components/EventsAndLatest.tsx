@@ -31,18 +31,17 @@ export default function EventsAndLatest({ articles }: EventsAndLatestProps) {
         <div className="flex items-center mb-6">
           <div className="bg-[#ffcc00] w-3 h-3 mr-3 shadow-sm"></div>
           <h2 className="text-white font-bold text-[18px] sm:text-[20px] tracking-tight font-sans uppercase">
-            Texas Tribune <span className="text-[#ffcc00] font-black">{featuredArticle.category || 'News'}</span>
-          </h2>
+      {featuredArticle.category || 'News'}</h2>
         </div>
         
         {/* Image Area */}
         <div className="relative w-full mb-5">
-          <div className="relative aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-gray-800 border-[3px] border-transparent group-hover:border-[#ffcc00] transition-colors rounded-sm">
+          <div className="relative aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-gray-800 border-[3px] border-transparent transition-colors rounded-sm">
             <Image 
               src={featuredArticle.image || "/don_huffines_portrait.png"} 
               alt={featuredArticle.headline}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              className="object-cover"
             />
           </div>
         </div>

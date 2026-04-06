@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface Article {
   id: number | string;
@@ -57,9 +58,10 @@ export default function ArticleGrid({
       {/* Article Grid Layout */}
       <div className={`grid grid-cols-1 md:grid-cols-2 ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6 lg:gap-8 gap-y-12`}>
         {articles.slice(0, visibleCount).map((article) => (
-          <article key={article.id} className="flex flex-col group cursor-pointer">
-            
-            {/* Image */}
+          <Link href={`/${article.category}/${article.id}`} key={article.id} className="block">
+            <article className="flex flex-col group cursor-pointer h-full">
+              
+              {/* Image */}
             <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
               <Image 
                 src={article.image} 
@@ -91,6 +93,7 @@ export default function ArticleGrid({
             </div>
             
           </article>
+          </Link>
         ))}
       </div>
 

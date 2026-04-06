@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const renderByline = (text: string) => {
   if (!text) return null;
@@ -18,6 +19,7 @@ interface MainArticleProps {
   summary?: string;
   byline?: string;
   date?: string;
+  href?: string;
 }
 
 export default function MainArticle({ 
@@ -25,9 +27,10 @@ export default function MainArticle({
   headline = "A border wall through Big Bend appears to be on hold after public outcry, but questions remain", 
   summary = "While the federal government hasn’t made a public statement about its plans, official maps show a “virtual wall” going through the region rather than a physical barrier.", 
   byline = "BY *URIEL J. GARCÍA*", 
-  date = "APRIL 3, 2026" 
+  date = "APRIL 3, 2026",
+  href 
 }: MainArticleProps) {
-  return (  
+  const content = (  
     <article className="flex flex-col w-full group cursor-pointer">
       {/* Image */}
       <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
@@ -59,4 +62,10 @@ export default function MainArticle({
       </div>
     </article>
   );
+
+  if (href) {
+    return <Link href={href} className="block w-full">{content}</Link>;
+  }
+
+  return content;
 }

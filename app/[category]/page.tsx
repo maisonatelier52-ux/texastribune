@@ -104,7 +104,7 @@ const filteredData = data
           </span>
           <div className="flex-grow h-[10px] bg-[#777777]"></div>
         </div>
-        <h1 className="text-[36px] md:text-[48px] font-bold text-center mb-4 text-black tracking-tight">
+        <h1 className="text-[36px] md:text-[48px] font-bold text-center mb-4 text-black tracking-tight leading-[1.1]">
           {categoryTitle}
         </h1>
         <p className="text-[17px] font-pt-serif text-center max-w-[800px] text-black leading-[1.6]">

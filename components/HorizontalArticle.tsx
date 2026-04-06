@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface HorizontalArticleProps {
   imageUrl: string;
@@ -7,10 +8,11 @@ interface HorizontalArticleProps {
   summary: string;
   author: string;
   date: string;
+  href?: string;
 }
 
-export default function HorizontalArticle({ imageUrl, headline, summary, author, date }: HorizontalArticleProps) {
-  return (
+export default function HorizontalArticle({ imageUrl, headline, summary, author, date, href }: HorizontalArticleProps) {
+  const content = (
     <article className="flex flex-col md:flex-row gap-6 md:gap-8 group cursor-pointer w-full">
       {/* Image Side */}
       <div className="md:w-[45%] lg:w-[48%] shrink-0">
@@ -37,4 +39,10 @@ export default function HorizontalArticle({ imageUrl, headline, summary, author,
       </div>
     </article>
   );
+
+  if (href) {
+    return <Link href={href} className="block w-full">{content}</Link>;
+  }
+
+  return content;
 }

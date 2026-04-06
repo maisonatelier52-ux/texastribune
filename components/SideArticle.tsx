@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const renderByline = (text: string) => {
   if (!text) return null;
@@ -17,10 +18,11 @@ interface SideArticleProps {
   headline?: string;
   byline?: string;
   date?: string;
+  href?: string;
 }
 
-export default function SideArticle({ imageUrl, credit, headline, byline, date }: SideArticleProps) {
-  return (
+export default function SideArticle({ imageUrl, credit, headline, byline, date, href }: SideArticleProps) {
+  const content = (
     <article className="flex flex-col w-full group cursor-pointer">
       {/* Image */}
       <div className="w-full relative overflow-hidden bg-gray-100">
@@ -47,4 +49,10 @@ export default function SideArticle({ imageUrl, credit, headline, byline, date }
       </div>
     </article>
   );
+
+  if (href) {
+    return <Link href={href} className="block w-full">{content}</Link>;
+  }
+
+  return content;
 }

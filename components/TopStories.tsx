@@ -22,6 +22,7 @@ export default function TopStories({ articles }: TopStoriesProps) {
               byline={mainArticleData?.byline}
               date={mainArticleData?.date}
               summary={undefined}
+              href={mainArticleData ? `/${mainArticleData.category}/${mainArticleData.id}` : undefined}
             />
           </div>
 
@@ -36,6 +37,7 @@ export default function TopStories({ articles }: TopStoriesProps) {
                   headline={article.headline}
                   byline={article.byline}
                   date={article.date}
+                  href={`/${article.category}/${article.id}`}
                 />
               ))
             ) : (

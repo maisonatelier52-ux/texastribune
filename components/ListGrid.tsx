@@ -32,6 +32,7 @@ export default function ListGrid({ articles }: { articles: articles[] }) {
                   summary={article.summary}
                   author={article.author}
                   date={article.date}
+                  href={`/${article.category}/${article.slug}`}
                 />
              ))}
           </div>
