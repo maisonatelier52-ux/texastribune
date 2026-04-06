@@ -45,14 +45,16 @@ export default function ExploreData({ articles }: ExploreDataProps) {
       </div>
 
       {/* Info Call-To-Action Box */}
-      <div className="bg-[#ffcc00] p-6 pb-8 text-center flex flex-col items-center select-none shadow-sm">
-        <p className="text-black font-extrabold text-[15px] leading-[1.3] mb-5 max-w-[210px] tracking-tight">
-          Our data explorers cover many Texas topics
-        </p>
-        <button className="bg-black text-white px-8 py-[13px] w-full font-bold uppercase tracking-widest text-[11px] hover:bg-gray-800 transition-colors rounded-none">
-          Read More
-        </button>
-      </div>
+    <div className="bg-[#ffcc00] p-6 pb-8 text-center flex flex-col items-center select-none shadow-sm">
+  <p className="text-black font-extrabold text-[15px] leading-[1.3] mb-5 tracking-tight">
+  Explore the biggest global stories impacting our world today. </p>
+
+  <a href="/world" className="w-full">
+    <button className="bg-black text-white cursor-pointer px-8 py-[13px] w-full font-bold uppercase tracking-widest text-[11px] hover:bg-gray-800 transition-colors rounded-none">
+      World News
+    </button>
+  </a>
+</div>
 
     </div>
   );

@@ -10,31 +10,29 @@ export default function TopHeader() {
     <div className='sticky top-0 z-50'>
       <div className="hidden w-full bg-[#1c1c1c] text-white md:flex justify-center">
         <div className="w-full max-w-7xl mx-auto flex items-stretch justify-between h-[42px] px-4 md:px-8">
-          <nav className="flex items-center gap-6">
-            <Link href="/investigations" className="text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
-              INVESTIGATIONS
+          <nav className="flex items-center gap-4">
+            <Link href="/investigations" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+              OUR COMPANY
             </Link>
-            <Link href="/guides" className="text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
-              GUIDES
+            <Link href="/guides" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+              CONTACT
             </Link>
-            <Link href="/about" className="text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+            <Link href="/about" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
               ABOUT
             </Link>
-            <Link href="/events" className="text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
-              EVENTS
+            <Link href="/events" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+              OUR TEAM
             </Link>
-            <Link href="/data" className="text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
-              DATA
-            </Link>
+            
           </nav>
 
           <div className="flex items-center h-full py-2">
             <Link href="/newsletters" className="flex items-center text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors pr-6">
               NEWSLETTERS
             </Link>
-            <Link href="/donate" className="flex items-center h-full bg-[#ffcc00] hover:bg-[#e6b800] text-black px-2 text-[12px] font-bold tracking-wider transition-colors">
+            {/* <Link href="/donate" className="flex items-center h-full bg-[#ffcc00] hover:bg-[#e6b800] text-black px-2 text-[12px] font-bold tracking-wider transition-colors">
               DONATE
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -49,19 +47,14 @@ export default function TopHeader() {
               <div className="w-10 invisible"></div>
               <div className="flex flex-col items-center flex-1">
                 <Link href="/" className="flex items-center gap-[6px] mb-1">
-                  <div className="relative flex items-center justify-center w-[42px] h-[42px] bg-[#ffcc00] mt-1 shrink-0">
-                    <svg viewBox="0 0 24 24" fill="white" className="w-[30px] h-[30px] z-10">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <div className="absolute -bottom-[8px] left-0 w-0 h-0 border-t-[9px] border-t-[#ffcc00] border-r-[10px] border-r-transparent"></div>
-                  </div>
+              
                <h1 className="text-black font-black text-[42px] md:text-[35px] uppercase tracking-[-0.05em] leading-[0.9] pr-2 scale-y-[1.1] transform origin-bottom">
-  The Texas Tribune
+Domain Name
 </h1>
                 </Link>
 
                 <span className="font-bold text-[14px] text-zinc-900 mt-2">
-                  Independent news. Trusted by Texans.
+                  Independent news. Trusted by Domain.
                 </span>
               </div>
 
@@ -131,9 +124,9 @@ export default function TopHeader() {
               </Link>
 
               <div className="flex items-center gap-3 shrink-0 pl-2">
-                <Link href="/donate" className="bg-[#ffcc00] text-black px-[10px] py-[6px] text-[10px] font-bold tracking-[0.05em] hover:bg-[#e6b800] transition-colors leading-none uppercase">
+                {/* <Link href="/donate" className="bg-[#ffcc00] text-black px-[10px] py-[6px] text-[10px] font-bold tracking-[0.05em] hover:bg-[#e6b800] transition-colors leading-none uppercase">
                   Donate
-                </Link>
+                </Link> */}
                 <button onClick={() => setIsMobileMenuOpen(true)} aria-label="Menu" className="flex flex-col justify-center items-center w-6 h-5 space-y-[4px]">
                   <span className="w-full h-[2px] bg-black block"></span>
                   <span className="w-full h-[2px] bg-black block"></span>
@@ -203,12 +196,10 @@ export default function TopHeader() {
             </div>
             
             <nav className="flex flex-col space-y-6 text-[13px] font-bold tracking-widest mb-8 uppercase">
-              <Link href="/investigations" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">INVESTIGATIONS</Link>
-              <Link href="/guides" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">GUIDES</Link>
+              <Link href="/investigations" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Company</Link>
+              <Link href="/guides" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Contact</Link>
               <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">ABOUT</Link>
-              <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">EVENTS</Link>
-              <Link href="/data" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">DATA</Link>
-              <Link href="/newsletters" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">NEWSLETTERS</Link>
+              <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Team</Link>
             </nav>
             
             <Link href="/donate" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#ffcc00] text-black font-bold tracking-widest py-[8px] px-4 w-fit text-[12px] transition-colors hover:bg-[#e6b800] uppercase">

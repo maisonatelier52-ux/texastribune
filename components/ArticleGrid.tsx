@@ -38,7 +38,7 @@ export default function ArticleGrid({
   columns = 3,
   title,
   showCategory = true,
-  buttonText = "Load More Posts"
+  buttonText = "Load More News"
 }: ArticleGridProps) {
   const [visibleCount, setVisibleCount] = useState(initialCount);
 

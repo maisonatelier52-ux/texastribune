@@ -37,7 +37,6 @@ export default function ListGrid({ articles }: { articles: articles[] }) {
              ))}
           </div>
 
-          {/* Sidebar / Data Tool -> Spans 4 Columns */}
           <div className="lg:col-span-4">
              <ExploreData articles={articles} />
           </div>

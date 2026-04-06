@@ -9,40 +9,22 @@ export default function Footer() {
           {/* Logo & First Column */}
           <div>
             <div className="mb-6 relative">
-              <div className="w-[42px] h-[40px] bg-[#FFCC00] flex items-center justify-center relative shadow-sm">
-                {/* Yellow triangle at bottom left for chat bubble effect */}
-                <div 
-                  className="absolute left-0 -bottom-[10px]"
-                  style={{
-                    width: 0,
-                    height: 0,
-                    borderTop: '10px solid #FFCC00',
-                    borderRight: '12px solid transparent'
-                  }}
-                ></div>
-                {/* Star SVG */}
-                <svg className="w-[26px] h-[26px] text-black shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
+         
             </div>
             
             <div className="w-[30px] border-b-[2px] border-[#FFCC00] mb-5"></div>
             
-            <ul className="space-y-[6px]">
-              <li><Link href="#" className="text-[#649cb2] hover:text-[#7bb0c4] text-[13px]">Donate</Link></li>
-              <li><Link href="#" className="text-[#E0E0E0] hover:text-white text-[13px]">View your giving history</Link></li>
-              <li><Link href="#" className="text-[#E0E0E0] hover:text-white text-[13px]">Contact Us</Link></li>
-              <li><Link href="#" className="text-[#E0E0E0] hover:text-white text-[13px]">Advertise</Link></li>
-              <li><Link href="#" className="text-[#E0E0E0] hover:text-white text-[13px]">Send us a confidential tip</Link></li>
-            </ul>
+          <p className="text-[#E0E0E0] text-[13px] leading-[1.5] max-w-[260px]">
+  Stay informed with reliable reporting, in-depth analysis, and stories that matter most.
+ 
+</p>
           </div>
 
           {/* TOPICS Column */}
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">TOPICS</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["World", "Business", "Technology", "Science", "Health", "Sports", "Entertainment", "Travel", "Fashion", "Food", "Culture", "Lifestyle"].map((topic) => (
+              {["World", "Business", "Education", "Finance", "Health", "Opinion", "Politics"].map((topic) => (
                 <li key={topic}><Link href="#" className="text-[#E0E0E0] hover:text-white">{topic}</Link></li>
               ))}
             </ul>
@@ -52,7 +34,7 @@ export default function Footer() {
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">INFO</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["About Us", "Our Staff", "Board of Directors", "Jobs", "Who Funds Us?"].map((item) => (
+              {["Our Company", "Contact Us", "About", "Our Team", "Editorial Team", "Correction Policy", "Privacy Policy", "Terms and Conditions"].map((item) => (
                 <li key={item}><Link href="#" className="text-[#E0E0E0] hover:text-white">{item}</Link></li>
               ))}
             </ul>
@@ -117,8 +99,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-14 pt-6 border-t border-[#3c3c3c] flex flex-col md:flex-row justify-between items-center text-[14px] text-white">
           <div className="flex space-x-4 items-center">
-            <span>© 2026 The Texas Tribune</span>
-            <span>Powered by Newspack</span>
+            <span>© 2026 Domain Name</span>
+            {/* <span>Powered by Newspack</span> */}
           </div>
           <div className="mt-4 md:mt-0 font-medium">
             <Link href="#" className="text-[#E0E0E0] hover:text-white">Privacy Policy</Link>

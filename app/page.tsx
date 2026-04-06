@@ -35,11 +35,13 @@ export default function Home() {
       <TopStories articles={businessData.slice(0, 3).map(mapDataToArticle)} />
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
       <ListGrid articles={businessData.slice(3, 6).map(mapDataToListArticle)} />
-      <NewsletterBox />
+      <NewsletterBox imageUrl="/images/news-img/read-mor-about-ad.webp" link='https://www.read-more-about.com/' />
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-      <DonateBanner />
+           <NewsletterBox imageUrl="/images/news-img/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
+
       <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-      <BriefNewsletterBox />
+            <NewsletterBox imageUrl="/images/news-img/theopenknowledge-ad.webp" link='https://www.theopenknowledge.com/' />
+
       <ArticleGrid articles={[businessData[4], businessData[5], businessData[6], businessData[0], businessData[2], businessData[3], businessData[0], businessData[1]].map(mapDataToArticle)} />
     </div>
   );
