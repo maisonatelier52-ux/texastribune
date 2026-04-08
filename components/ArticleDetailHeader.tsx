@@ -110,8 +110,8 @@ export default function ArticleDetailHeader({
           </button>
           
           {isShareOpen && (
-            <div className="absolute right-0 top-full mt-[10px] w-48 bg-white border border-gray-200 shadow-md z-50">
-              <div className="absolute -top-[6px] right-3 w-3 h-3 bg-white border-l border-t border-gray-200 transform rotate-45"></div>
+            <div className="absolute left-0 sm:left-auto sm:right-0 top-full mt-[10px] w-48 bg-white border border-gray-200 shadow-xl z-50">
+              <div className="absolute -top-[6px] left-4 sm:left-auto sm:right-3 w-3 h-3 bg-white border-l border-t border-gray-200 transform rotate-45"></div>
               
               <div className="relative z-10 bg-white flex flex-col pt-1">
                 <button onClick={() => handleShare('whatsapp')} className="flex cursor-pointer items-center px-4 py-[10px] hover:bg-gray-50 text-[15px] font-bold text-[#2a2a2a] tracking-normal normal-case text-left border-b border-gray-200 border-dotted transition-colors">
