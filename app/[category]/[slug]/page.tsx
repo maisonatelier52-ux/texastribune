@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata, ResolvingMetadata } from 'next';
 import ArticleDetailHeader from '@/components/ArticleDetailHeader';
 import RelatedArticles from '@/components/RelatedArticles';
 import ReadMore from '@/components/ReadMore';
@@ -33,6 +34,54 @@ export async function generateStaticParams() {
   });
   
   return params;
+}
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ category: string, slug: string }> },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { category, slug } = await params;
+  const data = allData[category];
+  const article = data?.find((item) => item.slug === slug);
+  
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+    };
+  }
+
+  // Prepend your domain for absolute URLs. Update this with your actual domain when deploying.
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://domain.com';
+  const imageUrl = article.image.startsWith('http') ? article.image : `${baseUrl}${article.image}`;
+
+  return {
+    title: article.title,
+    description: article.shortdescription,
+    openGraph: {
+      title: article.title,
+      description: article.shortdescription,
+      url: `${baseUrl}/${category}/${slug}`,
+      siteName: 'Domain Name',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: article.date,
+      authors: [article.author?.name || 'TEXAS TRIBUNE STAFF'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.shortdescription,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ArticlePage({
