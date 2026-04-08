@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Everett Caldwell",
+    "role": "Senior News Correspondent",
+    "bio": "Everett Caldwell is a U.S.-based journalist specializing in breaking news, business, and global affairs. With over a decade of newsroom experience, he focuses on delivering clear, fact-driven reporting on complex international and economic developments.",
+    "image": "/images/everett-caldwell.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Maren Whitlock",
+    "role": "Staff Writer",
+    "bio": "Maren Whitlock covers a wide range of topics including culture, entertainment, and public policy. Known for her analytical storytelling, she brings depth and clarity to fast-moving news cycles.",
+    "image": "/images/maren-whitlock.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Julian Straker",
+    "role": "Senior Reporter",
+    "bio": "Julian Straker reports on financial markets, corporate strategy, economic policy, and healthcare developments. His work emphasizes data-driven insights and the broader impact of business and health sector decisions on everyday consumers, with a focus on how policy, innovation, and access to care shape public well-being.",
+    "image": "/images/julian-straker.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Tessa Holloway",
+    "role": "Political Correspondent",
+    "bio": "Tessa Holloway focuses on U.S. politics, national affairs, and public policy. Her reporting combines on-the-ground coverage with in-depth research, offering clear and comprehensive insights into elections, legislative developments, and the broader political landscape shaping the country.",
+    "image": "/images/tessa-holloway.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Dominic Vance",
+    "role": "Sports Reporter",
+    "bio": "Dominic Vance covers global sports, international competitions, and the business of athletics. He is known for translating complex developments in leagues, tournaments, and sports policy into accessible, reader-focused analysis, with a focus on how global events shape athletes, teams, and the sports industry.",
+    "image": "/images/dominic-vance.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Lila Montgomery",
+    "role": "Global Affairs Editor",
+    "bio": "Lila Montgomery is a senior editor at The Texas Tribune, where she oversees coverage of international affairs, global events, and cross-border issues. She has reported from multiple countries, covering diplomacy, conflict, and major global developments. Her work focuses on how international events affect communities, economies, and political landscapes, with a particular emphasis on the U.S. role in global affairs.",
+    "image": "/images/lila-montgomery.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  },
+  {
+    "name": "Harrison Pike",
+    "role": "World News Correspondent",
+    "bio": "Harrison Pike is a U.S.-based journalist covering international news, geopolitics, and global economic developments. His reporting focuses on conflicts, diplomacy, and cross-border policy decisions, offering clear analysis of how global events impact political stability and international relations.",
+    "image": "/images/harrison-pike.webp",
+    "email": "",
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "substack": "",
+    "medium": ""
+  }
+]

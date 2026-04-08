@@ -30,12 +30,15 @@ export default function MainArticle({
   date = "APRIL 3, 2026",
   href 
 }: MainArticleProps) {
+  // Ensure valid URL or default fallback if imageUrl is empty
+  const validImageSrc = imageUrl || "https://images.unsplash.com/photo-1623049586396-1875c7b396e9?q=80&w=1200&auto=format&fit=crop";
+
   const content = (  
     <article className="flex flex-col w-full group cursor-pointer">
       {/* Image */}
       <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
         <Image 
-          src={imageUrl} 
+          src={validImageSrc} 
           alt={headline?.substring(0, 50) || "Main article image"} 
           fill
           className="object-cover"

@@ -1,10 +1,10 @@
 import businessData from '../../public/data/business.json'
-import educationData from '../../public/data/education.json';
-import opinionData from '../../public/data/opinion.json';
+import usData from '../../public/data/us.json';
+import worldData from '../../public/data/world.json';
 import healthData from '../../public/data/health.json';
 import politicsData from '../../public/data/politics.json';
-import worldData from '../../public/data/world.json';
-import financeData from '../../public/data/finance.json';
+import entertainmentData from '../../public/data/entertainment.json';
+import sportsData from '../../public/data/sports.json';
 import CategoryFeatured from '@/components/CategoryFeatured';
 import ArticleGrid from '@/components/ArticleGrid';
 
@@ -32,11 +32,11 @@ interface NewsItem {
 const allData: Record<string, NewsItem[]> = {
   business: businessData,
   world: worldData,
-  finance: financeData,
-  education: educationData,
+  us: usData,
   health: healthData,
   politics: politicsData,
-  opinion: opinionData  
+  entertainment: entertainmentData,
+  sports: sportsData  
 };
 
 export async function generateStaticParams() {

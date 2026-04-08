@@ -3,7 +3,13 @@ import NewsletterBox from "@/components/NewsletterBox";
 import ArticleGrid from "@/components/ArticleGrid";
 import BriefNewsletterBox from "@/components/BriefNewsletterBox";
 import DonateBanner from "@/components/DonateBanner";
+import worldData from '../public/data/world.json';
 import businessData from '../public/data/business.json';
+import politicsData from '../public/data/politics.json';
+import usData from '../public/data/us.json';
+import entertainmentData from '../public/data/entertainment.json';
+import healthData from '../public/data/health.json';
+import sportsData from '../public/data/sports.json';
 import ListGrid from "@/components/ListGrid";
 
 const mapDataToArticle = (data: any, index: number) => ({
@@ -32,17 +38,17 @@ const mapDataToListArticle = (data: any, index: number) => ({
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <TopStories articles={businessData.slice(0, 3).map(mapDataToArticle)} />
-      <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-      <ListGrid articles={businessData.slice(3, 6).map(mapDataToListArticle)} />
+      <TopStories articles={worldData.slice(0, 3).map(mapDataToArticle)} />
+      <ArticleGrid articles={[businessData[4], businessData[3], businessData[2]].map(mapDataToArticle)} />
+      <ListGrid articles={usData.slice(3, 6).map(mapDataToListArticle)} />
       <NewsletterBox imageUrl="/images/news-img/read-mor-about-ad.webp" link='https://www.read-more-about.com/' />
-      <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-           <NewsletterBox imageUrl="/images/news-img/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
+      <ArticleGrid articles={[politicsData[0], politicsData[1], politicsData[2]].map(mapDataToArticle)} />
+      <NewsletterBox imageUrl="/images/news-img/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
 
-      <ArticleGrid articles={[businessData[0], businessData[1], businessData[2]].map(mapDataToArticle)} />
-            <NewsletterBox imageUrl="/images/news-img/theopenknowledge-ad.webp" link='https://www.theopenknowledge.com/' />
+      <ArticleGrid articles={[entertainmentData[0], entertainmentData[1], entertainmentData[2]].map(mapDataToArticle)} />
+      <NewsletterBox imageUrl="/images/news-img/theopenknowledge-ad.webp" link='https://www.theopenknowledge.com/' />
 
-      <ArticleGrid articles={[businessData[4], businessData[5], businessData[6], businessData[0], businessData[2], businessData[3], businessData[0], businessData[1]].map(mapDataToArticle)} />
+      <ArticleGrid articles={[sportsData[0], sportsData[1], sportsData[2], sportsData[3], sportsData[4], sportsData[5], sportsData[6], sportsData[7]].map(mapDataToArticle)} />
     </div>
   );
 }

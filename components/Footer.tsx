@@ -24,8 +24,20 @@ export default function Footer() {
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">TOPICS</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["World", "Business", "Education", "Finance", "Health", "Opinion", "Politics"].map((topic) => (
-                <li key={topic}><Link href="#" className="text-[#E0E0E0] hover:text-white">{topic}</Link></li>
+              {[
+                { name: "World", href: "/world" },
+                { name: "U.S News", href: "/us" },
+                { name: "Business", href: "/business" },
+                { name: "Politics", href: "/politics" },
+                { name: "Health", href: "/health" },
+                { name: "Sports", href: "/sports" },
+                { name: "Entertainment", href: "/entertainment" }
+              ].map((topic) => (
+                <li key={topic.name}>
+                  <Link href={topic.href} className="text-[#E0E0E0] hover:text-white">
+                    {topic.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -34,8 +46,21 @@ export default function Footer() {
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">INFO</h3>
             <ul className="space-y-1.5 text-[13px]">
-              {["Our Company", "Contact Us", "About", "Our Team", "Editorial Team", "Correction Policy", "Privacy Policy", "Terms and Conditions"].map((item) => (
-                <li key={item}><Link href="#" className="text-[#E0E0E0] hover:text-white">{item}</Link></li>
+              {[
+                { name: "Our Company", href: "/our-company" },
+                { name: "Contact Us", href: "/contact-us" },
+                { name: "About", href: "/about" },
+                { name: "Our Team", href: "/our-team" },
+                { name: "Editorial Policy", href: "/editorial-policy" },
+                { name: "Correction Policy", href: "/correction-policy" },
+                { name: "Privacy Policy", href: "/privacy-policy" },
+                { name: "Terms and Conditions", href: "/terms-and-conditions" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-[#E0E0E0] hover:text-white">
+                    {item.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -102,9 +127,9 @@ export default function Footer() {
             <span>© 2026 Domain Name</span>
             {/* <span>Powered by Newspack</span> */}
           </div>
-          <div className="mt-4 md:mt-0 font-medium">
-            <Link href="#" className="text-[#E0E0E0] hover:text-white">Privacy Policy</Link>
-          </div>
+          {/* <div className="mt-4 md:mt-0 font-medium">
+            <Link href="/privacy-policy" className="text-[#E0E0E0] hover:text-white">Privacy Policy</Link>
+          </div> */}
         </div>
       </div>
     </footer>

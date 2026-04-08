@@ -22,12 +22,15 @@ interface SideArticleProps {
 }
 
 export default function SideArticle({ imageUrl, credit, headline, byline, date, href }: SideArticleProps) {
+  // Ensure valid URL or default fallback if imageUrl is empty
+  const validImageSrc = imageUrl || "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop";
+
   const content = (
     <article className="flex flex-col w-full group cursor-pointer">
       {/* Image */}
       <div className="w-full relative overflow-hidden bg-gray-100">
         <Image 
-          src={imageUrl} 
+          src={validImageSrc} 
           alt={headline?.substring(0, 50) || "Side article image"} 
           width={600}
           height={500}

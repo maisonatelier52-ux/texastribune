@@ -3,22 +3,22 @@ import ArticleDetailHeader from '@/components/ArticleDetailHeader';
 import RelatedArticles from '@/components/RelatedArticles';
 import ReadMore from '@/components/ReadMore';
 import EventsAndLatest from '@/components/EventsAndLatest';
-import businessData from '../../../public/data/business.json';
-import educationData from '../../../public/data/education.json';
-import opinionData from '../../../public/data/opinion.json';
+import businessData from '../../../public/data/business.json'
+import usData from '../../../public/data/us.json';
+import worldData from '../../../public/data/world.json';
 import healthData from '../../../public/data/health.json';
 import politicsData from '../../../public/data/politics.json';
-import worldData from '../../../public/data/world.json';
-import financeData from '../../../public/data/finance.json';
+import entertainmentData from '../../../public/data/entertainment.json';
+import sportsData from '../../../public/data/sports.json';
 
 const allData: Record<string, any[]> = {
   business: businessData,
   world: worldData,
-  finance: financeData,
-  education: educationData,
+  us: usData,
   health: healthData,
   politics: politicsData,
-  opinion: opinionData
+  entertainment: entertainmentData,
+  sports: sportsData
 };
 
 export async function generateStaticParams() {
@@ -113,12 +113,9 @@ export default async function ArticlePage({
         date={article.date}
         imageUrl={article.image}
       />
-      {/* Rest of the article content */}
       <div className="max-w-[760px] mx-auto px-4 sm:px-6 lg:px-8 bg-white pb-2">
     
-  {/* Listen to this article (Audio Player Mock) */}
       <div className="border max-w border-gray-300 rounded-[4px] py-4 px-4 sm:px-5 flex items-center mx-1 hover:bg-gray-50 transition-colors cursor-pointer group shadow-sm">
-        {/* Play button */}
         <div className="w-[46px] h-[46px] shrink-0 bg-[#e4e4e4] group-hover:bg-[#d4d4d4] rounded-full flex items-center justify-center mr-5 transition-colors">
           <svg className="w-[22px] h-[22px] text-gray-700 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
         </div>
@@ -137,7 +134,6 @@ export default async function ArticlePage({
           </div>
         </div>
 
-        {/* Right Controls */}
         <div className="flex flex-col items-end justify-between self-stretch shrink-0 pl-4 border-l border-transparent">
           <div className="text-[13px] font-bold text-gray-400 mt-2 mr-1">1x</div>
           <div className="flex items-center gap-[4px] text-[11px] text-gray-400">
@@ -147,7 +143,6 @@ export default async function ArticlePage({
         </div>
       </div>
 
-      {/* Note below audio */}
       <p className="mt-4 mb-6 mx-1 text-[12px] text-gray-500 font-sans leading-snug">
         Audio recording is automated for accessibility. Humans wrote and edited the story. See our <a href="#" className="font-bold text-[#0e7c9f] hover:underline cursor-pointer">AI policy</a>, and give us <a href="#" className="font-bold text-[#0e7c9f] hover:underline cursor-pointer">feedback</a>.
       </p>

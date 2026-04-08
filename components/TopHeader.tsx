@@ -5,31 +5,31 @@ import { useState } from 'react';
 export default function TopHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  return (
+  return ( 
     <>
     <div className='sticky top-0 z-50'>
       <div className="hidden w-full bg-[#1c1c1c] text-white md:flex justify-center">
         <div className="w-full max-w-7xl mx-auto flex items-stretch justify-between h-[42px] px-4 md:px-8">
           <nav className="flex items-center gap-4">
-            <Link href="/investigations" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+            <Link href="/our-company" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
               OUR COMPANY
             </Link>
-            <Link href="/guides" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+            <Link href="/contact-us" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
               CONTACT
             </Link>
             <Link href="/about" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
               ABOUT
             </Link>
-            <Link href="/events" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
+            <Link href="/our-team" className="text-[11px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors">
               OUR TEAM
             </Link>
             
           </nav>
 
           <div className="flex items-center h-full py-2">
-            <Link href="/newsletters" className="flex items-center text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors pr-6">
+            <p  className="flex items-center text-[12px] font-bold tracking-wider text-gray-200 hover:text-white transition-colors pr-6">
               NEWSLETTERS
-            </Link>
+            </p>
             {/* <Link href="/donate" className="flex items-center h-full bg-[#ffcc00] hover:bg-[#e6b800] text-black px-2 text-[12px] font-bold tracking-wider transition-colors">
               DONATE
             </Link> */}
@@ -79,30 +79,20 @@ Domain Name
             <div className="w-full h-[2px] bg-[#ffcc00] mt-4 mb-4"></div>
 
             <nav className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2 text-[14px] font-medium font-open-sans text-black">
-              <Link href="/" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Home
-              </Link>
-              <Link href="/world" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                World
-              </Link>
-              <Link href="/business" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Business
-              </Link>
-              <Link href="/education" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Education
-              </Link>
-              <Link href="/finance" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Finance
-              </Link>
-              <Link href="/health" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Health
-              </Link>
-              <Link href="/opinion" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Opinion
-              </Link>
-              <Link href="/politics" className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
-                Politics
-              </Link>
+              {[
+                { name: "Home", href: "/" },
+                { name: "World", href: "/world" },
+                { name: "U.S News", href: "/us" },
+                { name: "Politics", href: "/politics" },
+                { name: "Business", href: "/business" },
+                { name: "Health", href: "/health" },
+                { name: "Sports", href: "/sports" },
+                { name: "Entertainment", href: "/entertainment" }
+              ].map(item => (
+                <Link key={item.name} href={item.href} className="hover:underline decoration-1 underline-offset-4 opacity-90 hover:opacity-100 transition-all">
+                  {item.name}
+                </Link>
+              ))}
             </nav>
           </div>
           {/* ==============================================
@@ -112,14 +102,9 @@ Domain Name
             <div className="flex items-center justify-between pb-3 relative">
 
               <Link href="/" className="flex items-center gap-[6px] shrink-0">
-                <div className="relative flex items-center justify-center w-[20px] h-[20px] bg-[#ffcc00] shrink-0 mt-[2px]">
-                  <svg viewBox="0 0 24 24" fill="white" className="w-[14px] h-[14px] z-10">
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                  <div className="absolute -bottom-[4px] left-0 w-0 h-0 border-t-[5px] border-t-[#ffcc00] border-r-[5px] border-r-transparent"></div>
-                </div>
+               
                 <h1 className="text-black font-black text-[22px] uppercase tracking-tighter leading-none scale-y-[1.1] transform origin-bottom border-b border-transparent">
-                  The Texas Tribune
+                  Domain Name
                 </h1>
               </Link>
 
@@ -143,30 +128,20 @@ Domain Name
               className="flex overflow-x-auto items-center h-full gap-x-6 text-[12px] font-normal px-4 whitespace-nowrap [&::-webkit-scrollbar]:hidden"
               style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
             >
-              <Link href="/" className="text-[#555]">
-                Home
-              </Link>
-              <Link href="/world" className="text-[#555]">
-                World
-              </Link>
-              <Link href="/business" className="text-[#333]">
-                Business
-              </Link>
-              <Link href="/education" className="text-[#555]">
-                Education
-              </Link>
-              <Link href="/finance" className="text-[#555]">
-                Finance
-              </Link>
-              <Link href="/health" className="text-[#555]">
-                Health
-              </Link>
-              <Link href="/opinion" className="text-[#555]">
-                Opinion
-              </Link>
-              <Link href="/politics" className="text-[#555]">
-                Politics
-              </Link>
+              {[
+                { name: "Home", href: "/" },
+                { name: "World", href: "/world" },
+                { name: "U.S News", href: "/us" },
+                { name: "Politics", href: "/politics" },
+                { name: "Business", href: "/business" },
+                { name: "Health", href: "/health" },
+                { name: "Sports", href: "/sports" },
+                { name: "Entertainment", href: "/entertainment" }
+              ].map(item => (
+                 <Link key={item.name} href={item.href} className="text-[#555]">
+                   {item.name}
+                 </Link>
+              ))}
               <div className="pr-4 shrink-0"></div>
             </nav>
             <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
@@ -196,15 +171,17 @@ Domain Name
             </div>
             
             <nav className="flex flex-col space-y-6 text-[13px] font-bold tracking-widest mb-8 uppercase">
-              <Link href="/investigations" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Company</Link>
-              <Link href="/guides" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Contact</Link>
+              <Link href="/our-company" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Company</Link>
+              <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Contact</Link>
               <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">ABOUT</Link>
-              <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Team</Link>
+              <Link href="/our-team" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Our Team</Link>
+              <Link href="/editorial-policy" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Editorial Policy</Link>
+              <Link href="/correction-policy" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Correction Policy</Link>
+              <Link href="/privacy-policy" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Privacy Policy</Link>
+              <Link href="/terms-and-conditions" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300">Terms and Conditions</Link>
             </nav>
             
-            <Link href="/donate" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#ffcc00] text-black font-bold tracking-widest py-[8px] px-4 w-fit text-[12px] transition-colors hover:bg-[#e6b800] uppercase">
-              DONATE
-            </Link>
+            
           </div>
           <style dangerouslySetInnerHTML={{__html: `
             @keyframes slideIn {
