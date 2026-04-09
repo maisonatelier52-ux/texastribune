@@ -59,12 +59,12 @@ export default function Home() {
       <TopStories articles={worldData.slice(0, 3).map(mapDataToArticle)} />
       <ArticleGrid articles={[businessData[4], businessData[3], businessData[2]].map(mapDataToArticle)} />
       <ListGrid articles={usData.slice(3, 6).map(mapDataToListArticle)} />
-      <NewsletterBox imageUrl="/images/news-img/read-mor-about-ad.webp" link='https://www.read-more-about.com/' />
+      <NewsletterBox imageUrl="/images/read-mor-about-ad.webp" link='https://www.read-more-about.com/' />
       <ArticleGrid articles={[politicsData[0], politicsData[1], politicsData[2]].map(mapDataToArticle)} />
-      <NewsletterBox imageUrl="/images/news-img/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
+      <NewsletterBox imageUrl="/images/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
 
       <ArticleGrid articles={[entertainmentData[0], entertainmentData[1], entertainmentData[2]].map(mapDataToArticle)} />
-      <NewsletterBox imageUrl="/images/news-img/theopenknowledge-ad.webp" link='https://www.theopenknowledge.com/' />
+      <NewsletterBox imageUrl="/images/theopenknowledge-ad.webp" link='https://www.theopenknowledge.com/' />
 
       <ArticleGrid articles={[sportsData[0], sportsData[1], sportsData[2], sportsData[3], sportsData[4], sportsData[5], sportsData[6], sportsData[7]].map(mapDataToArticle)} />
     </div>
