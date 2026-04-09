@@ -42,6 +42,7 @@ export default function MainArticle({
           alt={headline?.substring(0, 50) || "Main article image"} 
           fill
           className="object-cover"
+          priority
         />
       </div>
       

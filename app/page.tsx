@@ -36,8 +36,26 @@ const mapDataToListArticle = (data: any, index: number) => ({
 
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "The Texas Tribune",
+    "url": "https://www.texastribune.org/",
+    "logo": "https://www.texastribune.org/favicon.ico",
+    "sameAs": [
+      "https://www.facebook.com/texastribune",
+      "https://twitter.com/TexasTribune",
+      "https://www.youtube.com/user/thetexastribune",
+      "https://www.instagram.com/texas_tribune/"
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <TopStories articles={worldData.slice(0, 3).map(mapDataToArticle)} />
       <ArticleGrid articles={[businessData[4], businessData[3], businessData[2]].map(mapDataToArticle)} />
       <ListGrid articles={usData.slice(3, 6).map(mapDataToListArticle)} />
