@@ -43,6 +43,7 @@ const ptSerif = localFont({
       style: 'italic',
     },
   ],
+  display: 'swap',
   variable: '--font-pt-serif',
 });
 
