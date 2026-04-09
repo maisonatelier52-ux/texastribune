@@ -36,30 +36,12 @@ const mapDataToListArticle = (data: any, index: number) => ({
 
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    "name": "The Texas Tribune",
-    "url": "https://www.texastribune.org/",
-    "logo": "https://www.texastribune.org/favicon.ico",
-    "sameAs": [
-      "https://www.facebook.com/texastribune",
-      "https://twitter.com/TexasTribune",
-      "https://www.youtube.com/user/thetexastribune",
-      "https://www.instagram.com/texas_tribune/"
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <TopStories articles={worldData.slice(0, 3).map(mapDataToArticle)} />
       <ArticleGrid articles={[businessData[4], businessData[3], businessData[2]].map(mapDataToArticle)} />
       <ListGrid articles={usData.slice(3, 6).map(mapDataToListArticle)} />
-      <NewsletterBox imageUrl="/images/read-mor-about-ad.webp" link='https://www.read-more-about.com/' />
+      <NewsletterBox imageUrl="/images/read-more-about-ad.webp" link='https://www.read-more-about.com/' />
       <ArticleGrid articles={[politicsData[0], politicsData[1], politicsData[2]].map(mapDataToArticle)} />
       <NewsletterBox imageUrl="/images/mirrorstandard-ad.webp" link='https://www.mirrorstandard.com/' />
 
