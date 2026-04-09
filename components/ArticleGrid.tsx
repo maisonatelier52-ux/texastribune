@@ -102,7 +102,7 @@ export default function ArticleGrid({
         <div className="w-full flex justify-center mt-12 pt-4">
           <button 
             onClick={loadMore}
-            className="bg-[#ffcc00] hover:bg-[#e6b800] text-black font-bold text-[13px] tracking-wide uppercase px-12 py-[14px] transition-colors"
+            className="bg-[#ffcc00] hover:bg-[#e6b800] text-black font-bold text-[13px] tracking-wide cursor-pointer uppercase px-12 py-[14px] transition-colors"
           >
             {buttonText}
           </button>
