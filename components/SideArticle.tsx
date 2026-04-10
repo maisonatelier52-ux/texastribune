@@ -34,6 +34,7 @@ export default function SideArticle({ imageUrl, credit, headline, byline, date, 
           alt={headline?.substring(0, 50) || "Side article image"} 
           width={600}
           height={500}
+          sizes="(max-width: 1024px) 100vw, 33vw"
           className="object-cover w-full aspect-[3/2]"
         />
       </div>

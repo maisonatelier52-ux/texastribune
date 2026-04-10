@@ -20,7 +20,7 @@ export default function HorizontalArticle({ imageUrl, headline, summary, author,
       {/* Image Side */}
       <div className="md:w-[45%] lg:w-[48%] shrink-0">
         <div className="w-full aspect-[3/2] relative bg-gray-100 overflow-hidden">
-          <Image src={validImageSrc} alt={headline} fill className="object-cover" />
+          <Image src={validImageSrc} alt={headline} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
         </div>
        
       </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -46,9 +46,18 @@ const ptSerif = localFont({
   display: 'swap',
   variable: '--font-pt-serif',
 });
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.texastribune.org"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | The Texas Tribune",
     default: "The Texas Tribune",
