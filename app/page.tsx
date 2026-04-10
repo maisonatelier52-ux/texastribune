@@ -1,7 +1,10 @@
+import dynamic from "next/dynamic";
 import TopStories from "@/components/TopStories";
-import NewsletterBox from "@/components/NewsletterBox";
-import ArticleGrid from "@/components/ArticleGrid";
 import BriefNewsletterBox from "@/components/BriefNewsletterBox";
+
+const ArticleGrid = dynamic(() => import("@/components/ArticleGrid"));
+const NewsletterBox = dynamic(() => import("@/components/NewsletterBox"));
+const ListGrid = dynamic(() => import("@/components/ListGrid"));
 import DonateBanner from "@/components/DonateBanner";
 import worldData from '../public/data/world.json';
 import businessData from '../public/data/business.json';
@@ -10,8 +13,6 @@ import usData from '../public/data/us.json';
 import entertainmentData from '../public/data/entertainment.json';
 import healthData from '../public/data/health.json';
 import sportsData from '../public/data/sports.json';
-import ListGrid from "@/components/ListGrid";
-
 const mapDataToArticle = (data: any, index: number) => ({
   id: data.slug || index.toString(),
   category: data.category,
