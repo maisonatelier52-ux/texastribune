@@ -47,7 +47,6 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
-        {/* Left Column: Featured Stories */}
         <div>
           <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] pb-[6px] mb-4 text-black">
             FEATURED STORIES
@@ -63,7 +62,6 @@ export default function CategoryFeatured({ articles }: CategoryFeaturedProps) {
           />
         </div>
 
-        {/* Right Column: Trending Now */}
         <div className="flex flex-col mt-8 lg:mt-[48px]">
           <h2 className="text-[18px] font-bold font-sans uppercase tracking-[0.05em] pb-[6px] mb-4 text-black">
             TRENDING NOW

@@ -13,9 +13,7 @@ export default function BriefNewsletterBox() {
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
           
-          {/* Logo Area */}
           <div className="flex items-end shrink-0 select-none">
-            {/* 'The' inside yellow square */}
             <div className="flex items-center justify-center bg-[#ffcc00] w-[46px] h-[46px] mb-1">
               <span 
                 className="italic text-[26px] text-zinc-900 mt-1" 
@@ -25,7 +23,6 @@ export default function BriefNewsletterBox() {
               </span>
             </div>
             
-            {/* 'BRIEF' tall and bold */}
             <span 
               className="text-[#2b323c] font-black text-5xl md:text-[60px] leading-none uppercase tracking-tighter ml-2" 
               style={{ transform: 'scaleY(1.15)', transformOrigin: 'bottom' }}
@@ -34,7 +31,6 @@ export default function BriefNewsletterBox() {
             </span>
           </div>
 
-          {/* Text and Form Area */}
           <div className="flex flex-col w-full max-w-[500px]">
             <p className="text-gray-800 text-[14px] md:text-[15px] leading-relaxed mb-4 font-[Arial,sans-serif]">
               Keep tabs on Texas politics and policy with our morning newsletter.

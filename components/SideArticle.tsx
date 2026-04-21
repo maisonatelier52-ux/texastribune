@@ -22,12 +22,11 @@ interface SideArticleProps {
 }
 
 export default function SideArticle({ imageUrl, credit, headline, byline, date, href }: SideArticleProps) {
-  // Ensure valid URL or default fallback if imageUrl is empty
   const validImageSrc = imageUrl || "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop";
 
   const content = (
     <article className="flex flex-col w-full group cursor-pointer">
-      {/* Image */}
+
       <div className="w-full relative overflow-hidden bg-gray-100">
         <Image 
           src={validImageSrc} 
@@ -39,14 +38,10 @@ export default function SideArticle({ imageUrl, credit, headline, byline, date, 
         />
       </div>
       
-    
-
-      {/* Headline */}
       <h2 className="text-[20px] md:text-[21px] font-bold font-pt-serif leading-none mt-2 text-black group-hover:text-gray-700 transition-colors">
         {headline}
       </h2>
 
-      {/* Byline */}
       <div className="text-[11px] mt-3 font-bold font-[Arial,sans-serif] uppercase tracking-wide flex items-center flex-wrap gap-[6px]">
         <span className="text-gray-500">{renderByline(byline || "")}</span>
         <span className="text-gray-500 font-normal">{date}</span>

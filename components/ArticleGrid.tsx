@@ -55,13 +55,11 @@ export default function ArticleGrid({
         </h2>
       )}
 
-      {/* Article Grid Layout */}
       <div className={`grid grid-cols-1 md:grid-cols-2 ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6 lg:gap-8 gap-y-12`}>
         {articles.slice(0, visibleCount).map((article) => (
           <Link href={`/${article.category}/${article.id}`} key={article.id} className="block">
             <article className="flex flex-col group cursor-pointer h-full">
               
-              {/* Image */}
             <div className="w-full aspect-[3/2] relative overflow-hidden bg-gray-100">
               <Image 
                 src={article.image} 
@@ -73,19 +71,16 @@ export default function ArticleGrid({
             </div>
             
            
-            {/* Category */}
             {showCategory && (
               <div className="text-[#0e7c9f] text-[10px] font-black uppercase tracking-wider mt-3 font-[Arial,sans-serif] hover:underline">
                 {article.category}
               </div>
             )}
 
-            {/* Headline */}
             <h2 className={`${columns === 4 ? 'text-[17px] md:text-[18px]' : 'text-[20px] md:text-[21px]'} font-bold font-pt-serif leading-none mt-2 text-black group-hover:text-gray-700 transition-colors`}>
               {article.headline}
             </h2>
 
-            {/* Byline */}
             <div className="text-[11px] mt-3 font-bold font-[Arial,sans-serif] uppercase tracking-wide flex items-center flex-wrap gap-[6px]">
               <span className="text-gray-500">
                 {renderByline(article.byline)}
@@ -98,7 +93,6 @@ export default function ArticleGrid({
         ))}
       </div>
 
-      {/* Load More Button */}
       {visibleCount < articles.length && (
         <div className="w-full flex justify-center mt-12 pt-4">
           <button 

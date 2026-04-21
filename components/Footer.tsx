@@ -5,22 +5,20 @@ export default function Footer() {
     <footer className="bg-[#242424] text-[#E0E0E0] pt-12 pb-6 text-[13px] font-sans">
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8">
-          
-          {/* Logo & First Column */}
+
           <div>
             <div className="mb-6 relative">
-         
+
             </div>
-            
+
             <div className="w-[30px] border-b-[2px] border-[#FFCC00] mb-5"></div>
-            
-          <p className="text-[#E0E0E0] text-[13px] leading-[1.5] max-w-[260px]">
-  Stay informed with reliable reporting, in-depth analysis, and stories that matter most.
- 
-</p>
+
+            <p className="text-[#E0E0E0] text-[13px] leading-[1.5] max-w-[260px]">
+              Stay informed with reliable reporting, in-depth analysis, and stories that matter most.
+
+            </p>
           </div>
 
-          {/* TOPICS Column */}
           <div>
             <h3 className="text-[#FFCC00] font-bold text-[13px] uppercase tracking-wide mb-5">TOPICS</h3>
             <ul className="space-y-1.5 text-[13px]">
@@ -80,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link href="#" className="flex items-center text-[#E0E0E0] hover:text-white group">
                   <svg className="w-[16px] h-[16px] mr-2.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                   X
                 </Link>
@@ -121,7 +119,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-14 pt-6 border-t border-[#3c3c3c] flex flex-col md:flex-row justify-between items-center text-[14px] text-white">
           <div className="flex space-x-4 items-center">
             <span>© 2026 Domain Name</span>

@@ -25,7 +25,6 @@ export default function ReadMore({ articles }: ReadMoreProps) {
       </h2>
       <div className="flex flex-col space-y-7">
         {articles.slice(0, 4).map((article, i) => {
-          // Process date to look like screenshot if possible
           let displayDate = article.date || "APRIL 3, 2026";
           displayDate = displayDate.toUpperCase();
           if (i < 2 && !displayDate.includes('UPDATED')) {

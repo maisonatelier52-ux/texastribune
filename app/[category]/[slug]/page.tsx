@@ -110,7 +110,6 @@ export default async function ArticlePage({
     );
   }
 
-  // Generate appropriate byline
   const authorName = article.author?.name;
   const role = article.author?.role || 'The Texas Tribune';
   const byline = authorName ? `*${authorName}*, ${role}` : "TEXAS TRIBUNE STAFF";
@@ -169,7 +168,6 @@ export default async function ArticlePage({
           <svg className="w-[22px] h-[22px] text-gray-700 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
         </div>
 
-        {/* Content */}
         <div className="flex flex-col flex-grow items-start min-w-0">
           <div className="text-[12px] text-gray-500 font-sans flex items-center gap-[6px] mb-[2px]">
             <svg className="w-[14px] h-[14px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>

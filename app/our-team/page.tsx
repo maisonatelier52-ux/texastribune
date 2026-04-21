@@ -61,7 +61,7 @@ const teamMembers = [
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+
       <section className="py-16 md:py-14 px-4 md:px-8 bg-neutral-50 border-b border-neutral-200 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           <div className="w-full md:w-5/12 flex-shrink-0">
@@ -80,7 +80,6 @@ export default function OurTeamPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 md:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-pt-serif">
           {teamMembers.map((member, idx) => (

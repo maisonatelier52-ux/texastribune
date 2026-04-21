@@ -27,14 +27,13 @@ export default function EventsAndLatest({ articles }: EventsAndLatestProps) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 my-8 flex flex-col lg:flex-row gap-8 lg:gap-10 border-t border-gray-200 items-start">
       
       <Link href={`/${(featuredArticle.category || 'news').toLowerCase().replace(/\s+/g, '-')}/${featuredArticle.slug}`} className="w-full lg:w-[60%] bg-[#242424] p-5 sm:p-7 pb-7 flex flex-col group cursor-pointer">
-        {/* Header */}
+   
         <div className="flex items-center mb-6">
           <div className="bg-[#ffcc00] w-3 h-3 mr-3 shadow-sm"></div>
           <h2 className="text-white font-bold text-[18px] sm:text-[20px] tracking-tight font-sans uppercase">
       {featuredArticle.category || 'News'}</h2>
         </div>
         
-        {/* Image Area */}
         <div className="relative w-full mb-5">
           <div className="relative aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-gray-800 border-[3px] border-transparent transition-colors rounded-sm">
             <Image 
@@ -46,7 +45,6 @@ export default function EventsAndLatest({ articles }: EventsAndLatestProps) {
           </div>
         </div>
         
-        {/* Article Details */}
         <div className="mt-1 flex-grow flex flex-col">
           <h3 className="text-white font-pt-serif font-bold text-2xl sm:text-[32px] mb-4 leading-none tracking-tight group-hover:text-gray-300 transition-colors">
             {featuredArticle.headline}
@@ -63,9 +61,7 @@ export default function EventsAndLatest({ articles }: EventsAndLatestProps) {
         </div>
       </Link>
 
-      {/* Right Side: Latest News List */}
       <div className="w-full lg:w-[40%] flex flex-col pt-2 lg:pt-0">
-        {/* Section Header */}
         <div className="flex items-center mb-7">
           <div className="w-[40px] h-[6px] bg-black shrink-0"></div>
           <h2 className="mx-4 text-[15px] font-sans font-bold uppercase tracking-widest text-[#111] whitespace-nowrap">
@@ -74,7 +70,6 @@ export default function EventsAndLatest({ articles }: EventsAndLatestProps) {
           <div className="flex-grow h-[6px] bg-black"></div>
         </div>
         
-        {/* Articles list */}
         <div className="space-y-7 sm:space-y-8">
           {remainingArticles.map((article) => (
             <div key={article.id} className="flex flex-col group cursor-pointer">

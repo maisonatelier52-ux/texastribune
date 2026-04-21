@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+
       <section className="py-16 md:py-14 px-4 md:px-8 bg-neutral-50 border-b border-neutral-200 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           <div className="w-full md:w-5/12 flex-shrink-0">
@@ -27,7 +27,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 md:px-8 py-16">
         <div className="prose prose-lg max-w-none font-pt-serif text-neutral-800 space-y-8">
           <div>

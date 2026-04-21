@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Centered Minimal Hero */}
         <section className="py-16 md:py-14 px-4 md:px-8 bg-neutral-50 border-b border-neutral-200 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           <div className="w-full md:w-5/12 flex-shrink-0">
@@ -25,10 +24,8 @@ export default function AboutPage() {
         </div>
       </section>
    
-      {/* Main Content - Side-by-side layout */}
       <main className="max-w-6xl mx-auto px-4 md:px-8 py-20 space-y-24">
         
-        {/* History Area */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-16">
           <div className="md:w-1/3 flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-bold font-pt-serif text-neutral-900 sticky top-24">
@@ -47,7 +44,6 @@ export default function AboutPage() {
 
         <hr className="border-neutral-100" />
 
-        {/* How We Work */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-16">
           <div className="md:w-1/3 flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-bold font-pt-serif text-neutral-900 sticky top-24">
@@ -66,7 +62,6 @@ export default function AboutPage() {
 
         <hr className="border-neutral-100" />
 
-        {/* Coverage Areas */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-16">
           <div className="md:w-1/3 flex-shrink-0">
             <h2 className="text-2xl md:text-3xl font-bold font-pt-serif text-neutral-900 sticky top-24">
@@ -102,7 +97,6 @@ export default function AboutPage() {
         </div>
       </main>
 
-      {/* Call to Action Banner */}
       <section className="bg-neutral-900 py-20 px-4 md:px-8 text-center mt-12">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold font-pt-serif text-white mb-6">

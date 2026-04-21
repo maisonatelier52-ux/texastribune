@@ -26,7 +26,6 @@ export default function TopStories({ articles }: TopStoriesProps) {
             />
           </div>
 
-          {/* Side Articles Stack (Spans 1 column on large screens) */}
           <div className="lg:col-span-1 flex flex-col gap-10">
             {articles && articles.length > 1 ? (
               articles.slice(1, 3).map((article, idx) => (

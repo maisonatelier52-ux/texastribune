@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function OurCompanyPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+   
       <section className="py-16 md:py-14 px-4 md:px-8 bg-neutral-50 border-b border-neutral-200 relative overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           <div className="w-full md:w-5/12 flex-shrink-0">
@@ -28,10 +28,8 @@ export default function OurCompanyPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-16">
         
-        {/* Mission Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold font-pt-serif mb-6 text-neutral-900 border-b-2 border-slate-300 inline-block pb-2">
             Our Mission & Impact
@@ -46,7 +44,6 @@ export default function OurCompanyPage() {
           </div>
         </section>
 
-        {/* Ethics and Standards Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold font-pt-serif mb-8 text-neutral-900">
             Our Core Principles
@@ -79,7 +76,6 @@ export default function OurCompanyPage() {
           </div>
         </section>
 
-        {/* Business and Funding Model */}
         <section className="mb-16 border-l-4 border-slate-300 pl-6 py-2">
           <h2 className="text-2xl font-bold font-pt-serif mb-4 text-neutral-900">
             How We Are Funded
